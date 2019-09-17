@@ -1,4 +1,7 @@
 package com.roma.mainproject.exception;
 
-public class ProductNotFindException {
+public class UserNotFoundException extends RuntimeException {
+    public UserNotFoundException() {
+        super();
+    }
 }

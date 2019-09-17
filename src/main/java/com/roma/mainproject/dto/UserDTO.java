@@ -1,5 +1,6 @@
 package com.roma.mainproject.dto;
 
+import com.roma.mainproject.validator.EmailConstrain;
 import com.roma.mainproject.validator.RegistrationValid;
 import org.springframework.validation.annotation.Validated;
 
@@ -7,6 +8,7 @@ import org.springframework.validation.annotation.Validated;
 @RegistrationValid
 public class UserDTO {
     private String username;
+    @EmailConstrain
     private String email;
     private String password;
     private String repeatPassword;

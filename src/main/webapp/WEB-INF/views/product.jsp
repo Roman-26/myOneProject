@@ -1,15 +1,16 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 22.08.2019
-  Time: 17:43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Product</title>
+    <style rel="stylesheet">
+        div{
+            position: relative;
+            left: 30vw;
+            top: 50px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
 <h1>Product</h1>

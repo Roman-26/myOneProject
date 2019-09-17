@@ -13,4 +13,5 @@ public interface UserService {
     void delete(String username);
     List<User> findAll();
     void registerNewUserDTO(UserDTO userDTO);
+
 }

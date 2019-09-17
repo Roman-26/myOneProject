@@ -1,11 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: user
-  Date: 22.08.2019
-  Time: 12:06
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -36,6 +30,7 @@
     <div>
         <form:input path="email" placeholder="Email"/>
         <span class="error">${user.invalidEmail}</span>
+        <form:errors path="email" cssClass="error"/>
     </div>
     <div>
         <form:password path="password" placeholder="Password"/>

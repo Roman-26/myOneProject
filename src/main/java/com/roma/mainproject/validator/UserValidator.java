@@ -19,7 +19,8 @@ public class UserValidator implements ConstraintValidator<RegistrationValid, Use
     @Override
     public boolean isValid(UserDTO userDTO, ConstraintValidatorContext constraintValidatorContext) {
         boolean isOk = true;
-        if(userDTO.getEmail().isEmpty() ||
+
+        if(userDTO.getEmail().isEmpty()||
                 userDTO.getUsername().isEmpty() ||
                 userDTO.getPassword().isEmpty()){
             userDTO.setInvalidEmail(userDTO.getEmail().isEmpty()?"Email cannot be empty!":"");

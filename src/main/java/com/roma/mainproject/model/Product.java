@@ -1,14 +1,12 @@
 package com.roma.mainproject.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.nio.file.Path;
 
 @Entity
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String name;
     private double price;
@@ -16,7 +14,19 @@ public class Product {
     private String manufacturer;
     private String productPicture;
 
+    @ManyToOne(optional = false,cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Product() {
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getId() {

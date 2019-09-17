@@ -1,12 +1,23 @@
 package com.roma.mainproject.dto;
 
+import com.roma.mainproject.model.User;
+
 public class ProductDTO {
     private String name;
     private Integer price;
     private Integer amount;
     private String manufacturer;
+    private User user;
 
     public ProductDTO() {
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getName() {

@@ -32,6 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
+
     @Override
     protected UserDetailsService userDetailsService() {
         UserDetails user = User.withUsername("username").password("password")

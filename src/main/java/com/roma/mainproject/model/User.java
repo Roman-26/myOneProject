@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 public class User implements UserDetails {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String firstname;
     private String secondname;
@@ -21,6 +21,9 @@ public class User implements UserDetails {
     private String email;
     private int age;
     private String phone;
+
+    @OneToMany(mappedBy = "user",fetch = FetchType.EAGER)
+    List<Product>productList;
 
 
     @Column(name = "role")
