@@ -30,14 +30,7 @@ public class FileUploadController {
 
     @Autowired
     private StorageService storageService;
-
-   // @GetMapping("/profile")
-   // public String listUploadedFiles(Model model){
-    //    model.addAttribute("files", storageService.loadAll()
-    //            .map(path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
-     //                   "serveFile",path.getFileName().toString()).build().toString()).collect(Collectors.toList()));
-     //   return "profile";
-   // }
+    
 
     @GetMapping("/profile/{filename:.+}")
     @ResponseBody
